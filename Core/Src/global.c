@@ -5,4 +5,5 @@
  *      Author: minhl
  */
 
+#include "global.h"
 
