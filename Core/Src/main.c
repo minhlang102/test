@@ -24,6 +24,7 @@
 #include "global.h"
 #include "fsm_automatic.h"
 #include "button.h"
+#include "traffic.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,6 +99,7 @@ int main(void)
   while (1)
   {
 	  fsm_automatic_run();
+	  setColor(status);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -220,6 +222,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	timerRun();
+	getKeyInput();
 }
 /* USER CODE END 4 */
 
